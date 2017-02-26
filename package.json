@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "http://github.com/sinonjs/sinon-eslint-config.git"
+    "url": "http://github.com/sinonjs/eslint-config-sinon.git"
   },
   "license": "BSD-3-Clause",
   "peerDependencies": {
