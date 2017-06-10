@@ -4,8 +4,11 @@ module.exports = {
         "browser": true,
         "node": true,
         "amd": true,
-        "es6": true
+        "es6": false
     },
+    "parserOptions": {
+        "ecmaVersion": 5
+    },    
     "rules": {
         "no-alert": 2,
         "no-array-constructor": 2,
