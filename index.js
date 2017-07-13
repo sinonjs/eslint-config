@@ -1,5 +1,4 @@
 module.exports = {
-    "ecmaFeatures": {},
     "env": {
         "browser": true,
         "node": true,
@@ -7,7 +6,8 @@ module.exports = {
         "es6": false
     },
     "parserOptions": {
-        "ecmaVersion": 5
+        "ecmaVersion": 5,
+        "ecmaFeatures": {},
     },    
     "rules": {
         "no-alert": 2,
