@@ -138,14 +138,14 @@ const variables = {
 
 // https://eslint.org/docs/rules/#nodejs-and-commonjs
 const nodeAndCommonJS = {
-    "callback-return": "off",
-    "global-require": "off",
-    "handle-callback-err": "off",
+    "callback-return": "error",
+    "global-require": "error",
+    "handle-callback-err": "error",
     "no-buffer-constructor": "off",
-    "no-mixed-requires": ["off", false],
-    "no-new-require": "off",
-    "no-path-concat": "off",
-    "no-process-env": "off",
+    "no-mixed-requires": ["error"],
+    "no-new-require": "error",
+    "no-path-concat": "error",
+    "no-process-env": "error",
     "no-process-exit": "error",
     "no-restricted-modules": "off",
     "no-sync": "off",
