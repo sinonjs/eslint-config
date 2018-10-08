@@ -135,6 +135,21 @@ const variables = {
     "no-use-before-define": "error",
 }
 
+// https://eslint.org/docs/rules/#nodejs-and-commonjs
+const nodeAndCommonJS = {
+    "callback-return": "off",
+    "global-require": "off",
+    "handle-callback-err": "off",
+    "no-buffer-constructor": "off",
+    "no-mixed-requires": ["off", false],
+    "no-new-require": "off",
+    "no-path-concat": "off",
+    "no-process-env": "off",
+    "no-process-exit": "error",
+    "no-restricted-modules": "off",
+    "no-sync": "off",
+}
+
 module.exports = {
     "env": {
         "browser": true,
@@ -155,7 +170,6 @@ module.exports = {
         "no-extra-parens": [2, "functions"],
         "no-inline-comments": 0,
         "no-lonely-if": 0,
-        "no-mixed-requires": [0, false],
         "no-mixed-spaces-and-tabs": [2, false],
         "linebreak-style": [0, "unix"],
         "no-multiple-empty-lines": [2, {"max": 2}],
@@ -163,16 +177,10 @@ module.exports = {
         "no-negated-in-lhs": 2,
         "no-nested-ternary": 2,
         "no-new-object": 2,
-        "no-new-require": 0,
-        "no-path-concat": 0,
         "no-plusplus": 0,
-        "no-process-env": 0,
-        "no-process-exit": 2,
         "no-reserved-keys": 0,
-        "no-restricted-modules": 0,
         "no-space-before-semi": 0,
         "no-spaced-func": 2,
-        "no-sync": 0,
         "no-ternary": 0,
         "no-trailing-spaces": 2,
         "no-this-before-super": 0,
@@ -182,7 +190,6 @@ module.exports = {
         "prefer-const": 0,
         "array-bracket-spacing": [2, "never"],
         "brace-style": [0, "1tbs"],
-        "callback-return": 0,
         "camelcase": 2,
         "comma-dangle": [2, "never"],
         "comma-spacing": 2,
@@ -195,7 +202,6 @@ module.exports = {
         "func-style": [0, "declaration"],
         "generator-star": 0,
         "generator-star-spacing": 0,
-        "handle-callback-err": 0,
         "indent": [2, 4, {"SwitchCase": 1}],
         "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
         "lines-around-comment": 0,
