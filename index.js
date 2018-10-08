@@ -251,6 +251,41 @@ const stylisticIssues = {
     "wrap-regex": "off"
 }
 
+// https://eslint.org/docs/rules/#ecmascript-6
+const ecmaScript6 = {
+    "arrow-body-style": "off",
+    "arrow-parens": "off",
+    "arrow-spacing": "off",
+    "constructor-super": "off",
+    "generator-star-spacing": "off",
+    "no-class-assign": "off",
+    "no-confusing-arrow": "off",
+    "no-const-assign": "off",
+    "no-dupe-class-members": "off",
+    "no-duplicate-imports": "off",
+    "no-new-symbol": "off",
+    "no-restricted-imports": "off",
+    "no-this-before-super": "off",
+    "no-useless-computed-key": "off",
+    "no-useless-constructor": "off",
+    "no-useless-rename": "off",
+    "no-var": 0,
+    "object-shorthand": 0,
+    "prefer-arrow-callback": "off",
+    "prefer-const": 0,
+    "prefer-destructuring": "off",
+    "prefer-numeric-literals": "off",
+    "prefer-rest-params": "off",
+    "prefer-spread": "off",
+    "prefer-template": "off",
+    "require-yield": 0,
+    "rest-spread-spacing": "off",
+    "sort-imports": "off",
+    "symbol-description": "off",
+    "template-curly-spacing": "off",
+    "yield-star-spacing": "off"
+}
+
 module.exports = {
     "env": {
         "browser": true,
@@ -263,22 +298,5 @@ module.exports = {
         "ecmaFeatures": {},
     },
     "rules": Object.assign({
-        "no-catch-shadow": 2,
-        "no-ex-assign": 2,
-        "no-extra-parens": [2, "functions"],
-        "no-native-reassign": 2,
-        "no-negated-in-lhs": 2,
-        "no-reserved-keys": 0,
-        "no-space-before-semi": 0,
-        "no-spaced-func": 2,
-        "no-this-before-super": 0,
-        "no-var": 0,
-        "prefer-const": 0,
-        "constructor-super": 0,
-        "generator-star": 0,
-        "generator-star-spacing": 0,
-        "object-shorthand": 0,
-        "require-yield": 0
-
-    }, possibleErrors, bestPractices, strictMode, variables, stylisticIssues)
+    }, possibleErrors, bestPractices, strictMode, variables, stylisticIssues, ecmaScript6)
 }
