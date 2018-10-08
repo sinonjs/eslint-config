@@ -1,14 +1,14 @@
 {
   "name": "eslint-config-sinon",
   "description": "Common eslint config for Sinon",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "http://github.com/sinonjs/eslint-config-sinon.git"
   },
   "license": "BSD-3-Clause",
   "peerDependencies": {
-    "eslint": "^4.2.0"
+    "eslint": "^5.6.1"
   },
   "files": [
     "index",
