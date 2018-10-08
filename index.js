@@ -1,3 +1,7 @@
+// the rules that are commented out with "// prettier: ", are the ones that are handled by prettier
+// which are noted to never be needed:
+// see https://github.com/prettier/eslint-config-prettier/blob/0ea836f81ac14295fb6801c4aa74446e04dda8ad/index.js#L16-L87
+
 // https://eslint.org/docs/rules/#possible-errors
 const possibleErrors = {
     "for-direction": "error",
@@ -17,8 +21,8 @@ const possibleErrors = {
     "no-empty-character-class": "error",
     "no-ex-assign": "error",
     "no-extra-boolean-cast": "error",
-    "no-extra-parens": ["error", "functions"],
-    "no-extra-semi": "error",
+    // prettier: "no-extra-parens": ["error", "functions"],
+    // prettier: "no-extra-semi": "error",
     "no-func-assign": "error",
     "no-inner-declarations": ["error", "functions"],
     "no-invalid-regexp": "error",
@@ -50,7 +54,7 @@ const bestPractices = {
     "consistent-return": "error",
     "curly": ["error", "all"],
     "default-case": "error",
-    "dot-location": ["error", "property"],
+    // prettier: "dot-location": ["error", "property"],
     "dot-notation": ["error", { "allowKeywords": true }],
     "eqeqeq": ["error", "allow-null"],
     "guard-for-in": "error",
@@ -68,7 +72,7 @@ const bestPractices = {
     "no-extra-bind": "error",
     "no-extra-label": "error",
     "no-fallthrough": "error",
-    "no-floating-decimal": "error",
+    // prettier: "no-floating-decimal": "error",
     "no-global-assign": "error",
     "no-implicit-coercion": "error",
     "no-implicit-globals": "error",
@@ -79,7 +83,7 @@ const bestPractices = {
     "no-lone-blocks": "error",
     "no-loop-func": "error",
     "no-magic-numbers": "off",
-    "no-multi-spaces": "error",
+    // prettier: "no-multi-spaces": "error",
     "no-multi-str": "error",
     "no-new": "error",
     "no-new-func": "error",
@@ -112,7 +116,7 @@ const bestPractices = {
     "require-await": "off",
     "require-unicode-regexp": "off",
     "vars-on-top": "off",
-    "wrap-iife": "error",
+    // prettier: "wrap-iife": "error",
     "yoda": ["error", "never"]
 }
 
@@ -153,32 +157,32 @@ const nodeAndCommonJS = {
 
 // https://eslint.org/docs/rules/#stylistic-issues
 const stylisticIssues = {
-    "array-bracket-newline": "off",
-    "array-bracket-spacing": ["error", "never"],
-    "array-element-newline": "off",
-    "block-spacing": "off",
-    "brace-style": ["off", "1tbs"],
+    // prettier: "array-bracket-newline": "off",
+    // prettier: "array-bracket-spacing": ["error", "never"],
+    // prettier: "array-bracket-spacing": array-element-newline": "off",
+    // prettier: "block-spacing": "off",
+    // prettier: "brace-style": ["off", "1tbs"],
     "camelcase": "error",
     "capitalized-comments": "off",
-    "comma-dangle": ["error", "never"],
-    "comma-spacing": "error",
-    "comma-style": "error",
-    "computed-property-spacing": ["off", "never"],
+    // prettier: "comma-dangle": ["error", "never"],
+    // prettier: "comma-spacing": "error",
+    // prettier: "comma-style": "error",
+    // prettier: "computed-property-spacing": ["off", "never"],
     "consistent-this": ["off", "that"],
-    "eol-last": "error",
-    "func-call-spacing": "error",
+    // prettier: "eol-last": "error",
+    // prettier: "func-call-spacing": "error",
     "func-name-matching": "off",
     "func-names": "off",
     "func-style": ["off", "declaration"],
-    "function-paren-newline": "off",
+    // prettier: "function-paren-newline": "off",
     "id-blacklist": "off",
     "id-length": "off",
     "id-match": "off",
-    "implicit-arrow-linebreak": "off",
-    "indent": ["error", 4, {"SwitchCase": 1}],
-    "jsx-quotes": "off",
-    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
-    "keyword-spacing": ["error", { "after": true }],
+    // prettier: "implicit-arrow-linebreak": "off",
+    // prettier: "indent": ["error", 4, {"SwitchCase": 1}],
+    // prettier: "jsx-quotes": "off",
+    // prettier: "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+    // prettier: "keyword-spacing": ["error", { "after": true }],
     "line-comment-position": "off",
     "linebreak-style": ["off", "unix"],
     "lines-around-comment": "off",
@@ -192,19 +196,19 @@ const stylisticIssues = {
     "max-statements": ["off", 10],
     "max-statements-per-line": "off",
     "multiline-comment-style": "off",
-    "multiline-ternary": "off",
+    // prettier: "multiline-ternary": "off",
     "new-cap": "error",
-    "new-parens": "error",
-    "newline-per-chained-call": "off",
+    // prettier: "new-parens": "error",
+    // prettier: "newline-per-chained-call": "off",
     "no-array-constructor": "error",
     "no-bitwise": "error",
     "no-continue": "error",
     "no-inline-comments": "off",
     "no-lonely-if": "off",
     "no-mixed-operators": "off",
-    "no-mixed-spaces-and-tabs": ["error", false],
+    // prettier: "no-mixed-spaces-and-tabs": ["error", false],
     "no-multi-assign": "off",
-    "no-multiple-empty-lines": ["error", {"max": 2}],
+    // prettier: "no-multiple-empty-lines": ["error", {"max": 2}],
     "no-negated-condition": "off",
     "no-nested-ternary": "error",
     "no-new-object": "error",
@@ -212,53 +216,48 @@ const stylisticIssues = {
     "no-restricted-syntax": "off",
     "no-tabs": "off",
     "no-ternary": "off",
-    "no-trailing-spaces": "error",
+    // prettier: "no-trailing-spaces": "error",
     "no-underscore-dangle": "error",
     "no-unneeded-ternary": "off",
-    "no-whitespace-before-property": "off",
-    "nonblock-statement-body-position": "off",
-    "object-curly-newline": "off",
-    "object-curly-spacing": ["off", "never"],
-    "object-property-newline": "off",
-    "one-var": ["error", {
-         // Exactly one declaration for uninitialized variables per function (var) or block (let or const)
-        "uninitialized": "always",
-         // Exactly one declarator per initialized variable declaration per function (var) or block (let or const)
-        "initialized": "never"
-    }],
+    // prettier: "no-whitespace-before-property": "off",
+    // prettier: "nonblock-statement-body-position": "off",
+    // prettier: "object-curly-newline": "off",
+    // prettier: "object-curly-spacing": ["off", "never"],
+    // prettier: "object-property-newline": "off",
+    // prettier: "one-var": "off",
     "one-var-declaration-per-line": "off",
     "operator-assignment": ["off", "always"],
-    "operator-linebreak": "off",
-    "padded-blocks": "off",
+    // prettier: "operator-linebreak": "off",
+    // prettier: "padded-blocks": "off",
     "padding-line-between-statements": "off",
     "prefer-object-spread": "off",
-    "quote-props": "off",
+    // prettier: "quote-props": "off",
     "quotes": ["error", "double"],
     "require-jsdoc": "off",
     "semi": "error",
-    "semi-spacing": ["error", {"before": false, "after": true}],
-    "semi-style": "off",
+    // prettier: "semi-spacing": ["error", {"before": false, "after": true}],
+    // prettier: "semi-style": "off",
     "sort-keys": "off",
     "sort-vars": "off",
-    "space-before-blocks": ["error", "always"],
-    "space-before-function-paren": ["error", {"anonymous": "always", "named": "never"}],
-    "space-in-parens": ["off", "never"],
-    "space-infix-ops": "error",
-    "space-unary-ops": ["error", { "words": true, "nonwords": false }],
+    // prettier: "space-before-blocks": ["error", "always"],
+    // prettier: "space-before-function-paren": ["error", {"anonymous": "always", "named": "never"}],
+    // prettier: "space-in-parens": ["off", "never"],
+    // prettier: "space-infix-ops": "error",
+    // prettier: "space-unary-ops": ["error", { "words": true, "nonwords": false }],
     "spaced-comment": "off",
-    "switch-colon-spacing": "off",
-    "template-tag-spacing": "off",
-    "unicode-bom": "off",
-    "wrap-regex": "off"
+    // prettier: "switch-colon-spacing": "off",
+    // prettier: "template-tag-spacing": "off",
+    // prettier: "unicode-bom": "off",
+    // prettier: "wrap-regex": "off"
 }
 
 // https://eslint.org/docs/rules/#ecmascript-6
 const ecmaScript6 = {
     "arrow-body-style": "off",
     "arrow-parens": "off",
-    "arrow-spacing": "off",
+    // prettier: "arrow-spacing": "off",
     "constructor-super": "off",
-    "generator-star-spacing": "off",
+    // prettier: "generator-star-spacing": "off",
     "no-class-assign": "off",
     "no-confusing-arrow": "off",
     "no-const-assign": "error",
@@ -280,14 +279,19 @@ const ecmaScript6 = {
     "prefer-spread": "off",
     "prefer-template": "off",
     "require-yield": 0,
-    "rest-spread-spacing": "off",
+    // prettier: "rest-spread-spacing": "off",
     "sort-imports": "off",
     "symbol-description": "off",
-    "template-curly-spacing": "off",
-    "yield-star-spacing": "off"
+    // prettier: "template-curly-spacing": "off",
+    // prettier: "yield-star-spacing": "off"
 }
 
+const prettier = {
+    "prettier/prettier": "error"
+};
+
 module.exports = {
+    "extends": ["plugin:prettier/recommended"],
     "env": {
         "browser": true,
         "node": true,
@@ -298,6 +302,7 @@ module.exports = {
         "ecmaVersion": 5,
         "ecmaFeatures": {},
     },
+    "plugins": ["prettier"],
     "rules": Object.assign(
         {},
         possibleErrors,
@@ -305,6 +310,7 @@ module.exports = {
         strictMode,
         variables,
         stylisticIssues,
-        ecmaScript6
+        ecmaScript6,
+        prettier
     )
 }
