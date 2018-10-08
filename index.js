@@ -297,6 +297,13 @@ module.exports = {
         "ecmaVersion": 5,
         "ecmaFeatures": {},
     },
-    "rules": Object.assign({
-    }, possibleErrors, bestPractices, strictMode, variables, stylisticIssues, ecmaScript6)
+    "rules": Object.assign(
+        {},
+        possibleErrors,
+        bestPractices,
+        strictMode,
+        variables,
+        stylisticIssues,
+        ecmaScript6
+    )
 }
