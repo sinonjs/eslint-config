@@ -115,6 +115,12 @@ const bestPractices = {
     "yoda": ["error", "never"]
 }
 
+// https://eslint.org/docs/rules/#strict-mode
+const strictMode = {
+    "strict": ["error", "global"]
+}
+
+
 module.exports = {
     "env": {
         "browser": true,
@@ -223,7 +229,6 @@ module.exports = {
         "space-unary-ops": [2, { "words": true, "nonwords": false }],
         "spaced-comment": 0,
         "spaced-line-comment": [0, "always"],
-        "strict": [2, "global"],
         "wrap-regex": 0
-    }, possibleErrors, bestPractices)
+    }, possibleErrors, bestPractices, strictMode)
 }
