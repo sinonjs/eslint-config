@@ -120,6 +120,20 @@ const strictMode = {
     "strict": ["error", "global"]
 }
 
+// https://eslint.org/docs/rules/#variables
+const variables = {
+    "init-declarations": "off",
+    "no-delete-var": "error",
+    "no-label-var": "off",
+    "no-restricted-globals": "off",
+    "no-shadow": "error",
+    "no-shadow-restricted-names": "error",
+    "no-undef": "error",
+    "no-undef-init": "error",
+    "no-undefined": "off",
+    "no-unused-vars": ["error", {"vars": "all", "args": "after-used"}],
+    "no-use-before-define": "error",
+}
 
 module.exports = {
     "env": {
@@ -137,7 +151,6 @@ module.exports = {
         "no-bitwise": 2,
         "no-catch-shadow": 2,
         "no-continue": 2,
-        "no-delete-var": 2,
         "no-ex-assign": 2,
         "no-extra-parens": [2, "functions"],
         "no-inline-comments": 0,
@@ -157,21 +170,14 @@ module.exports = {
         "no-process-exit": 2,
         "no-reserved-keys": 0,
         "no-restricted-modules": 0,
-        "no-shadow": 2,
-        "no-shadow-restricted-names": 2,
         "no-space-before-semi": 0,
         "no-spaced-func": 2,
         "no-sync": 0,
         "no-ternary": 0,
         "no-trailing-spaces": 2,
         "no-this-before-super": 0,
-        "no-undef": 2,
-        "no-undef-init": 2,
-        "no-undefined": 0,
         "no-underscore-dangle": 2,
         "no-unneeded-ternary": 0,
-        "no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
-        "no-use-before-define": 2,
         "no-var": 0,
         "prefer-const": 0,
         "array-bracket-spacing": [2, "never"],
@@ -191,7 +197,6 @@ module.exports = {
         "generator-star-spacing": 0,
         "handle-callback-err": 0,
         "indent": [2, 4, {"SwitchCase": 1}],
-        "init-declarations": 0,
         "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
         "lines-around-comment": 0,
         "max-depth": [0, 4],
@@ -230,5 +235,5 @@ module.exports = {
         "spaced-comment": 0,
         "spaced-line-comment": [0, "always"],
         "wrap-regex": 0
-    }, possibleErrors, bestPractices, strictMode)
+    }, possibleErrors, bestPractices, strictMode, variables)
 }
