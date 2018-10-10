@@ -18,8 +18,8 @@ Add this to the `package.json`:
     "extends": "eslint-config-sinon"
   },
   "devDependencies": {
-    "eslint-config-sinon": "^1.0.0",
-    "eslint": "^3.16.1"
+    "eslint-config-sinon": "^2.0.0",
+    "eslint": "^5.6.1"
   }
 }
 ```
