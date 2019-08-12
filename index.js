@@ -159,7 +159,7 @@ const nodeAndCommonJS = {
 const stylisticIssues = {
     // prettier: "array-bracket-newline": "off",
     // prettier: "array-bracket-spacing": ["error", "never"],
-    // prettier: "array-bracket-spacing": array-element-newline": "off",
+    // prettier: "array-element-newline": "off",
     // prettier: "block-spacing": "off",
     // prettier: "brace-style": ["off", "1tbs"],
     "camelcase": "error",
