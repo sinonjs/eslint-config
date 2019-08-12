@@ -40,7 +40,6 @@ const possibleErrors = {
     "no-unsafe-negation": "error",
     "require-atomic-updates": "off",
     "use-isnan": "error",
-    "valid-jsdoc": "error",
     "valid-typeof": "error",
 }
 
