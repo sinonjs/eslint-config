@@ -233,7 +233,6 @@ const stylisticIssues = {
     "prefer-object-spread": "off",
     // prettier: "quote-props": "off",
     "quotes": ["error", "double"],
-    "require-jsdoc": "off",
     "semi": "error",
     // prettier: "semi-spacing": ["error", {"before": false, "after": true}],
     // prettier: "semi-style": "off",
