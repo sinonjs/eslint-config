@@ -40,7 +40,6 @@ const possibleErrors = {
     "no-unsafe-negation": "error",
     "require-atomic-updates": "off",
     "use-isnan": "error",
-    "valid-jsdoc": "error",
     "valid-typeof": "error",
 }
 
@@ -111,6 +110,7 @@ const bestPractices = {
     "no-void": "error",
     "no-warning-comments": ["error", { "terms": ["todo", "fixme", "xxx"], "location": "start" }],
     "no-with": "error",
+    "prefer-named-capture-group": "off",
     "prefer-promise-reject-errors": "off",
     "radix": "off",
     "require-await": "off",
@@ -159,7 +159,7 @@ const nodeAndCommonJS = {
 const stylisticIssues = {
     // prettier: "array-bracket-newline": "off",
     // prettier: "array-bracket-spacing": ["error", "never"],
-    // prettier: "array-bracket-spacing": array-element-newline": "off",
+    // prettier: "array-element-newline": "off",
     // prettier: "block-spacing": "off",
     // prettier: "brace-style": ["off", "1tbs"],
     "camelcase": "error",
@@ -233,7 +233,6 @@ const stylisticIssues = {
     "prefer-object-spread": "off",
     // prettier: "quote-props": "off",
     "quotes": ["error", "double"],
-    "require-jsdoc": "off",
     "semi": "error",
     // prettier: "semi-spacing": ["error", {"before": false, "after": true}],
     // prettier: "semi-style": "off",
