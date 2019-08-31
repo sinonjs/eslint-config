@@ -137,7 +137,7 @@ const variables = {
     "no-undef-init": "error",
     "no-undefined": "off",
     "no-unused-vars": ["error", {"vars": "all", "args": "after-used"}],
-    "no-use-before-define": "error",
+    "no-use-before-define": ["error", {"functions": false}]
 }
 
 // https://eslint.org/docs/rules/#nodejs-and-commonjs
