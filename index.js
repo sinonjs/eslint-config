@@ -289,8 +289,16 @@ const prettier = {
     "prettier/prettier": "error"
 };
 
+const jsDoc = {
+    "jsdoc/require-param-description": "off",
+    "jsdoc/require-returns-description": "off"
+}
+
 module.exports = {
-    "extends": ["plugin:prettier/recommended"],
+    "extends": [
+        "plugin:jsdoc/recommended",
+        "plugin:prettier/recommended"
+    ],
     "env": {
         "browser": true,
         "node": true,
@@ -301,7 +309,10 @@ module.exports = {
         "ecmaVersion": 5,
         "ecmaFeatures": {},
     },
-    "plugins": ["prettier"],
+    "plugins": [
+        "jsdoc",
+        "prettier"
+    ],
     "rules": Object.assign(
         {},
         possibleErrors,
@@ -310,6 +321,21 @@ module.exports = {
         variables,
         stylisticIssues,
         ecmaScript6,
-        prettier
-    )
+        prettier,
+        jsDoc
+    ),
+    "settings": {
+        "jsdoc": {
+            "ignorePrivate": true
+        }
+    },
+
+    overrides: [
+        {
+          files: ["*.test.*"],
+          rules: {
+            "jsdoc/require-jsdoc": "off"
+          }
+        }
+    ]
 }
