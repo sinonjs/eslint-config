@@ -6,11 +6,19 @@
     "type": "git",
     "url": "http://github.com/sinonjs/eslint-config-sinon.git"
   },
+  "scripts": {
+    "version": "changes --commits --footer",
+    "postversion": "git push --follow-tags && npm publish --access public"
+  },
   "license": "BSD-3-Clause",
   "files": [
     "index",
     "LICENSE",
     "README.md"
   ],
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@studio/changes": "^2.1.0"
+  }
 }
