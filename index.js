@@ -260,7 +260,7 @@ const ecmaScript6 = {
     "no-class-assign": "error",
     "no-confusing-arrow": "error",
     "no-const-assign": "error",
-    "no-dupe-class-members": "off",
+    "no-dupe-class-members": "error",
     "no-duplicate-imports": "off",
     "no-new-symbol": "off",
     "no-restricted-imports": "off",
