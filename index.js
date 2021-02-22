@@ -32,6 +32,7 @@ const possibleErrors = {
     "no-loss-of-precision": "error",
     "no-misleading-character-class": "error",
     "no-obj-calls": "error",
+    "no-promise-executor-return": "error",
     // sinon has this solution: https://github.com/sinonjs/commons/tree/master/lib/prototypes
     "no-prototype-builtins": "off",
     "no-regex-spaces": "error",
