@@ -188,7 +188,7 @@ const stylisticIssues = {
     "lines-around-comment": "off",
     "lines-between-class-members": "off",
     "max-depth": ["off", 4],
-    "max-len": ["error", 120, 4],
+    // prettier: "max-len": ["error", 120, 4],
     "max-lines": "off",
     "max-lines-per-function": "off",
     "max-nested-callbacks": ["warn", 2],
