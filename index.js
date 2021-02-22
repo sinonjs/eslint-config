@@ -41,6 +41,7 @@ const possibleErrors = {
     "no-template-curly-in-string": "off",
     "no-unexpected-multiline": "error",
     "no-unreachable": "error",
+    "no-unreachable-loop": "error",
     "no-unsafe-finally": "error",
     "no-unsafe-negation": "error",
     "require-atomic-updates": "off",
