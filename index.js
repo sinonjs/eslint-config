@@ -262,7 +262,7 @@ const ecmaScript6 = {
     "no-const-assign": "error",
     "no-dupe-class-members": "error",
     "no-duplicate-imports": "error",
-    "no-new-symbol": "off",
+    "no-new-symbol": "error",
     "no-restricted-imports": "off",
     "no-this-before-super": "off",
     "no-useless-computed-key": "off",
