@@ -281,7 +281,7 @@ const ecmaScript6 = {
     "require-yield": 0,
     // prettier: "rest-spread-spacing": "off",
     "sort-imports": "off",
-    "symbol-description": "off",
+    "symbol-description": "error",
     // prettier: "template-curly-spacing": "off",
     // prettier: "yield-star-spacing": "off"
 }
