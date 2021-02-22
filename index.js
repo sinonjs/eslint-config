@@ -125,7 +125,7 @@ const bestPractices = {
     "no-warning-comments": ["error", { "terms": ["todo", "fixme", "xxx"], "location": "start" }],
     "no-with": "error",
     "prefer-named-capture-group": "off",
-    "prefer-promise-reject-errors": "off",
+    "prefer-promise-reject-errors": "error",
     "radix": "off",
     "require-await": "off",
     "require-unicode-regexp": "off",
