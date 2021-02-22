@@ -126,6 +126,7 @@ const bestPractices = {
     "no-with": "error",
     "prefer-named-capture-group": "off",
     "prefer-promise-reject-errors": "error",
+    "prefer-regex-literals": "off",
     "radix": "off",
     "require-await": "off",
     "require-unicode-regexp": "off",
