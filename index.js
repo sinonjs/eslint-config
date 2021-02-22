@@ -107,7 +107,7 @@ const bestPractices = {
     "no-redeclare": "error",
     "no-restricted-properties": "error",
     "no-return-assign": "error",
-    "no-return-await": "off",
+    "no-return-await": "error",
     "no-script-url": "error",
     "no-self-assign": "error",
     "no-self-compare": "error",
