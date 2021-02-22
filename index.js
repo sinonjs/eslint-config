@@ -266,7 +266,7 @@ const ecmaScript6 = {
     "no-restricted-exports": "off",
     "no-restricted-imports": "off",
     "no-this-before-super": "error",
-    "no-useless-computed-key": "off",
+    "no-useless-computed-key": "error",
     "no-useless-constructor": "off",
     "no-useless-rename": "off",
     "no-var": 0,
