@@ -25,6 +25,7 @@ const possibleErrors = {
     // prettier: "no-extra-parens": ["error", "functions"],
     // prettier: "no-extra-semi": "error",
     "no-func-assign": "error",
+    "no-import-assign": "error",
     "no-inner-declarations": ["error", "functions"],
     "no-invalid-regexp": "error",
     "no-irregular-whitespace": "error",
