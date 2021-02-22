@@ -44,6 +44,7 @@ const possibleErrors = {
     "no-unreachable-loop": "error",
     "no-unsafe-finally": "error",
     "no-unsafe-negation": "error",
+    "no-unsafe-optional-chaining": "error",
     "require-atomic-updates": "off",
     "use-isnan": "error",
     "valid-typeof": "error",
