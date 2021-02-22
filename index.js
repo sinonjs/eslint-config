@@ -277,7 +277,7 @@ const ecmaScript6 = {
     "prefer-numeric-literals": "off",
     "prefer-rest-params": "off",
     "prefer-spread": "off",
-    "prefer-template": "off",
+    "prefer-template": "error",
     "require-yield": 0,
     // prettier: "rest-spread-spacing": "off",
     "sort-imports": "off",
