@@ -268,7 +268,7 @@ const ecmaScript6 = {
     "no-this-before-super": "error",
     "no-useless-computed-key": "error",
     "no-useless-constructor": "error",
-    "no-useless-rename": "off",
+    "no-useless-rename": "error",
     "no-var": 0,
     "object-shorthand": 0,
     "prefer-arrow-callback": "off",
