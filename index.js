@@ -261,7 +261,7 @@ const ecmaScript6 = {
     "no-confusing-arrow": "error",
     "no-const-assign": "error",
     "no-dupe-class-members": "error",
-    "no-duplicate-imports": "off",
+    "no-duplicate-imports": "error",
     "no-new-symbol": "off",
     "no-restricted-imports": "off",
     "no-this-before-super": "off",
