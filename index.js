@@ -36,6 +36,7 @@ const possibleErrors = {
     // sinon has this solution: https://github.com/sinonjs/commons/tree/master/lib/prototypes
     "no-prototype-builtins": "off",
     "no-regex-spaces": "error",
+    "no-setter-return": "error",
     "no-sparse-arrays": "error",
     "no-template-curly-in-string": "off",
     "no-unexpected-multiline": "error",
