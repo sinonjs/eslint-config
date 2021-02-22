@@ -232,7 +232,7 @@ const stylisticIssues = {
     "padding-line-between-statements": "off",
     "prefer-object-spread": "off",
     // prettier: "quote-props": "off",
-    "quotes": ["error", "double"],
+    // prettier: "quotes": ["error", "double"],
     "semi": "error",
     // prettier: "semi-spacing": ["error", {"before": false, "after": true}],
     // prettier: "semi-style": "off",
