@@ -17,7 +17,9 @@
     "README.md"
   ],
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "eslint": "^7.20.0"
+  },
   "devDependencies": {
     "@studio/changes": "^2.1.0"
   }
