@@ -61,6 +61,7 @@ const bestPractices = {
     "consistent-return": "error",
     "curly": ["error", "all"],
     "default-case": "error",
+    "default-case-last": "error",
     // prettier: "dot-location": ["error", "property"],
     "dot-notation": ["error", { "allowKeywords": true }],
     "eqeqeq": ["error", "allow-null"],
