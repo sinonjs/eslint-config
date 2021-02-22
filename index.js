@@ -29,6 +29,7 @@ const possibleErrors = {
     "no-inner-declarations": ["error", "functions"],
     "no-invalid-regexp": "error",
     "no-irregular-whitespace": "error",
+    "no-loss-of-precision": "error",
     "no-misleading-character-class": "error",
     "no-obj-calls": "error",
     // sinon has this solution: https://github.com/sinonjs/commons/tree/master/lib/prototypes
