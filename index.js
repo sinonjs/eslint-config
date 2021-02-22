@@ -255,7 +255,7 @@ const ecmaScript6 = {
     "arrow-body-style": ["error", "as-needed"],
     "arrow-parens": ["error", "as-needed"],
     // prettier: "arrow-spacing": "off",
-    "constructor-super": "off",
+    "constructor-super": "error",
     // prettier: "generator-star-spacing": "off",
     "no-class-assign": "off",
     "no-confusing-arrow": "off",
