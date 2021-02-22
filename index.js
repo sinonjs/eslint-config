@@ -66,6 +66,7 @@ const bestPractices = {
     // prettier: "dot-location": ["error", "property"],
     "dot-notation": ["error", { "allowKeywords": true }],
     "eqeqeq": ["error", "allow-null"],
+    "grouped-accessor-pairs": ["error", "getBeforeSet"],
     "guard-for-in": "error",
     "max-classes-per-file": "off",
     "no-alert": "error",
