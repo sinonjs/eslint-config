@@ -128,7 +128,7 @@ const bestPractices = {
     "prefer-promise-reject-errors": "error",
     "prefer-regex-literals": "off",
     "radix": "off",
-    "require-await": "off",
+    "require-await": "error",
     "require-unicode-regexp": "off",
     "vars-on-top": "off",
     // prettier: "wrap-iife": "error",
