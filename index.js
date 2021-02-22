@@ -257,7 +257,7 @@ const ecmaScript6 = {
     // prettier: "arrow-spacing": "off",
     "constructor-super": "error",
     // prettier: "generator-star-spacing": "off",
-    "no-class-assign": "off",
+    "no-class-assign": "error",
     "no-confusing-arrow": "off",
     "no-const-assign": "error",
     "no-dupe-class-members": "off",
