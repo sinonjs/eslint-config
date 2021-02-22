@@ -258,7 +258,7 @@ const ecmaScript6 = {
     "constructor-super": "error",
     // prettier: "generator-star-spacing": "off",
     "no-class-assign": "error",
-    "no-confusing-arrow": "off",
+    "no-confusing-arrow": "error",
     "no-const-assign": "error",
     "no-dupe-class-members": "off",
     "no-duplicate-imports": "off",
