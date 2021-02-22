@@ -72,6 +72,7 @@ const bestPractices = {
     "no-alert": "error",
     "no-caller": "error",
     "no-case-declarations": "error",
+    "no-constructor-return": "error",
     "no-div-regex": "error",
     "no-else-return": "error",
     "no-empty-function": "error",
