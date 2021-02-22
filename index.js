@@ -175,7 +175,7 @@ const stylisticIssues = {
     "func-names": "off",
     "func-style": ["off", "declaration"],
     // prettier: "function-paren-newline": "off",
-    "id-blacklist": "off",
+    "id-denylist": "off",
     "id-length": "off",
     "id-match": "off",
     // prettier: "implicit-arrow-linebreak": "off",
