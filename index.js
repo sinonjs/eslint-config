@@ -267,7 +267,7 @@ const ecmaScript6 = {
     "no-restricted-imports": "off",
     "no-this-before-super": "error",
     "no-useless-computed-key": "error",
-    "no-useless-constructor": "off",
+    "no-useless-constructor": "error",
     "no-useless-rename": "off",
     "no-var": 0,
     "object-shorthand": 0,
