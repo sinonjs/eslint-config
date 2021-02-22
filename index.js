@@ -303,12 +303,7 @@ module.exports = {
     "env": {
         "browser": true,
         "node": true,
-        "amd": true,
-        "es6": false
-    },
-    "parserOptions": {
-        "ecmaVersion": 5,
-        "ecmaFeatures": {},
+        "es2017": true
     },
     "plugins": [
         "jsdoc",
