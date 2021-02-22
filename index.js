@@ -155,21 +155,6 @@ const variables = {
     "no-use-before-define": ["error", {"functions": false}]
 }
 
-// https://eslint.org/docs/rules/#nodejs-and-commonjs
-const nodeAndCommonJS = {
-    "callback-return": "error",
-    "global-require": "error",
-    "handle-callback-err": "error",
-    "no-buffer-constructor": "off",
-    "no-mixed-requires": ["error"],
-    "no-new-require": "error",
-    "no-path-concat": "error",
-    "no-process-env": "error",
-    "no-process-exit": "error",
-    "no-restricted-modules": "off",
-    "no-sync": "off",
-}
-
 // https://eslint.org/docs/rules/#stylistic-issues
 const stylisticIssues = {
     // prettier: "array-bracket-newline": "off",
