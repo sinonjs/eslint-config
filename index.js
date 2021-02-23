@@ -297,6 +297,7 @@ const jsDoc = {
 
 module.exports = {
     "extends": [
+        "plugin:compat/recommended",
         "plugin:jsdoc/recommended",
         "plugin:prettier/recommended"
     ],
@@ -306,6 +307,7 @@ module.exports = {
         "es2017": true
     },
     "plugins": [
+        "compat",
         "jsdoc",
         "prettier"
     ],
