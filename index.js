@@ -286,10 +286,6 @@ const ecmaScript6 = {
     // prettier: "yield-star-spacing": "off"
 }
 
-const prettier = {
-    "prettier/prettier": "error"
-};
-
 const jsDoc = {
     "jsdoc/require-param-description": "off",
     "jsdoc/require-returns-description": "off"
@@ -298,8 +294,7 @@ const jsDoc = {
 module.exports = {
     "extends": [
         "plugin:compat/recommended",
-        "plugin:jsdoc/recommended",
-        "plugin:prettier/recommended"
+        "plugin:jsdoc/recommended"
     ],
     "env": {
         "browser": true,
@@ -308,8 +303,7 @@ module.exports = {
     },
     "plugins": [
         "compat",
-        "jsdoc",
-        "prettier"
+        "jsdoc"
     ],
     "rules": Object.assign(
         {},
@@ -319,7 +313,6 @@ module.exports = {
         variables,
         stylisticIssues,
         ecmaScript6,
-        prettier,
         jsDoc
     ),
     "settings": {
