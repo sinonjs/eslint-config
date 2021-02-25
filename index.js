@@ -329,6 +329,7 @@ module.exports = {
             },
             extends: ["plugin:mocha/recommended"],
             rules: {
+                "max-nested-callbacks": ["warn", 5],
                 "jsdoc/require-jsdoc": "off",
                 "mocha/handle-done-callback": "error",
                 "mocha/max-top-level-suites": "off",
