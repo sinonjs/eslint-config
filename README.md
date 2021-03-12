@@ -9,7 +9,7 @@ need to install `@sinonjs/eslint-config`.
 ## Install
 
 ```bash
-$ npm install eslint-config-sinon eslint --save-dev
+$ npm install @sinonjs/eslint-config --save-dev
 ```
 
 ## Usage
