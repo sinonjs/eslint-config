@@ -7,6 +7,9 @@
     "url": "http://github.com/sinonjs/eslint-config-sinon.git"
   },
   "scripts": {
+    "lint": "eslint . --config index.js",
+    "prettier:check": "prettier --check '**/*.{js, md}'",
+    "prettier:write": "prettier --write '**/*.{js, md}'",
     "version": "changes --commits --footer",
     "postversion": "git push --follow-tags && npm publish --access public"
   },
@@ -24,6 +27,18 @@
     "eslint-plugin-mocha": "^8.0.0"
   },
   "devDependencies": {
-    "@studio/changes": "^2.1.0"
+    "@studio/changes": "^2.1.0",
+    "husky": "^5.1.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "lint-staged": {
+    "*.{js,md}": "prettier --check",
+    "*.js": "eslint --quiet"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
