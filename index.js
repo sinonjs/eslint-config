@@ -257,7 +257,7 @@ const stylisticIssues = {
 // https://eslint.org/docs/rules/#ecmascript-6
 const ecmaScript6 = {
   "arrow-body-style": ["error", "as-needed"],
-  "arrow-parens": ["error", "as-needed"],
+  // prettier: "arrow-parens": ["error", "as-needed"],
   // prettier: "arrow-spacing": "off",
   "constructor-super": "error",
   // prettier: "generator-star-spacing": "off",
