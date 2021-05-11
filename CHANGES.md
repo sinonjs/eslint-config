@@ -1,5 +1,12 @@
 # Changes
 
+## 4.0.2
+
+- [`9874e52`](https://github.com/sinonjs/eslint-config-sinon/commit/9874e5252806724ba6acaf927f2cde18bb5a76f8)
+  disable arrow-parens (Carl-Erik Kopseng)
+
+_Released by [Carl-Erik Kopseng](https://github.com/fatso83) on 2021-05-11._
+
 ## 4.0.1
 
 - [`166b2bb`](https://github.com/sinonjs/eslint-config-sinon/commit/166b2bbf93b6977f869def8076a91e178886477e)
