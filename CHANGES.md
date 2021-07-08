@@ -1,17 +1,44 @@
 # Changes
 
+## 4.0.4
+
+- [`06c342a`](https://github.com/sinonjs/eslint-config-sinon/commit/06c342a37585a60557b77c57bc0c813b430f6aa2)
+  Bump glob-parent from 5.1.1 to 5.1.2 (dependabot[bot])
+    >
+    > Bumps [glob-parent](https://github.com/gulpjs/glob-parent) from 5.1.1 to 5.1.2.
+    > - [Release notes](https://github.com/gulpjs/glob-parent/releases)
+    > - [Changelog](https://github.com/gulpjs/glob-parent/blob/main/CHANGELOG.md)
+    > - [Commits](https://github.com/gulpjs/glob-parent/compare/v5.1.1...v5.1.2)
+    >
+    > ---
+    > updated-dependencies:
+    > - dependency-name: glob-parent
+    >   dependency-type: indirect
+    > ...
+    >
+    > Signed-off-by: dependabot[bot] <support@github.com>
+
+_Released by Morgan Roderick on 2021-07-08._
+
 ## 4.0.3
 
 - [`60d64d9`](https://github.com/sinonjs/eslint-config-sinon/commit/60d64d99bd74ad276305188f24db3ea29bbb16d7)
   Bump browserslist from 4.16.3 to 4.16.6 (#10) (dependabot[bot])
     >
-    > Bumps [browserslist](https://github.com/browserslist/browserslist) from 4.16.3 to 4.16.6.    >
-    > - [Release notes](https://github.com/browserslist/browserslist/releases)    >
-    > - [Changelog](https://github.com/browserslist/browserslist/blob/main/CHANGELOG.md)    >
-    > - [Commits](https://github.com/browserslist/browserslist/compare/4.16.3...4.16.6)    >
-    >     >
-    > Signed-off-by: dependabot[bot] <support@github.com>    >
-    >     >
+    > Bumps [browserslist](https://github.com/browserslist/browserslist) from 4.16.3 to 4.16.6.
+    >
+    > - [Release notes](https://github.com/browserslist/browserslist/releases)
+    >
+    > - [Changelog](https://github.com/browserslist/browserslist/blob/main/CHANGELOG.md)
+    >
+    > - [Commits](https://github.com/browserslist/browserslist/compare/4.16.3...4.16.6)
+    >
+    > 
+    >
+    > Signed-off-by: dependabot[bot] <support@github.com>
+    >
+    > 
+    >
     > Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
 
 _Released by Morgan Roderick on 2021-05-29._
