@@ -1,5 +1,18 @@
 # Changes
 
+## 4.0.5
+
+- [`2b0f92b`](https://github.com/sinonjs/eslint-config-sinon/commit/2b0f92b34d0c060b6aef132cfa54866823fb0b1b)
+  Upgrade dependencies (Carl-Erik Kopseng)
+- [`097f653`](https://github.com/sinonjs/eslint-config-sinon/commit/097f65324cf778170cd7710e7f679d2f1bbce650)
+  Target all extensions matching .test. and -test. (Carl-Erik Kopseng)
+    >
+    > Fixes an issue where .mjs test files were not checked with
+    > this config.
+    >
+
+_Released by [Carl-Erik Kopseng](https://github.com/fatso83) on 2022-01-28._
+
 ## 4.0.4
 
 - [`06c342a`](https://github.com/sinonjs/eslint-config-sinon/commit/06c342a37585a60557b77c57bc0c813b430f6aa2)
