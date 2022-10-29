@@ -1,5 +1,26 @@
 # Changes
 
+## 4.0.6
+
+- [`53cd7ca`](https://github.com/sinonjs/eslint-config-sinon/commit/53cd7ca99e22d9b2b30559d0838bf247a4fda827)
+  Upgrade dependencies to latest (Morgan Roderick)
+- [`e7e8a17`](https://github.com/sinonjs/eslint-config-sinon/commit/e7e8a17bb409d046146985525def2301a88be143)
+  Bump minimist from 1.2.5 to 1.2.6 (dependabot[bot])
+    >
+    > Bumps [minimist](https://github.com/substack/minimist) from 1.2.5 to 1.2.6.
+    > - [Release notes](https://github.com/substack/minimist/releases)
+    > - [Commits](https://github.com/substack/minimist/compare/1.2.5...1.2.6)
+    >
+    > ---
+    > updated-dependencies:
+    > - dependency-name: minimist
+    >   dependency-type: indirect
+    > ...
+    >
+    > Signed-off-by: dependabot[bot] <support@github.com>
+
+_Released by Morgan Roderick on 2022-10-29._
+
 ## 4.0.5
 
 - [`2b0f92b`](https://github.com/sinonjs/eslint-config-sinon/commit/2b0f92b34d0c060b6aef132cfa54866823fb0b1b)
