@@ -297,6 +297,9 @@ const jsDoc = {
 
 module.exports = {
   extends: ["plugin:compat/recommended", "plugin:jsdoc/recommended"],
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
   env: {
     browser: true,
     node: true,

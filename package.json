@@ -7,11 +7,12 @@
     "url": "http://github.com/sinonjs/eslint-config-sinon.git"
   },
   "scripts": {
-    "lint": "eslint . --config index.js",
+    "lint": "eslint . ",
     "prettier:check": "prettier --check '**/*.{js, md}'",
     "prettier:write": "prettier --write '**/*.{js, md}'",
     "version": "changes --commits --footer",
-    "postversion": "git push --follow-tags && npm publish --access public"
+    "postversion": "git push --follow-tags && npm publish --access public",
+    "test": "npm run lint"
   },
   "license": "BSD-3-Clause",
   "files": [
