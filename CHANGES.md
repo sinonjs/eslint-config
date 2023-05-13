@@ -1,25 +1,12 @@
 # Changes
 
-## 4.0.6
+## 4.1.0
 
-- [`53cd7ca`](https://github.com/sinonjs/eslint-config-sinon/commit/53cd7ca99e22d9b2b30559d0838bf247a4fda827)
-  Upgrade dependencies to latest (Morgan Roderick)
-- [`e7e8a17`](https://github.com/sinonjs/eslint-config-sinon/commit/e7e8a17bb409d046146985525def2301a88be143)
-  Bump minimist from 1.2.5 to 1.2.6 (dependabot[bot])
+- [`3aa7026`](https://github.com/sinonjs/eslint-config-sinon/commit/3aa70263691bc64389ac8c44f487453dd32bdbd3)
+  Fix failing parsing of destructuring assignment (Carl-Erik Kopseng)
     >
-    > Bumps [minimist](https://github.com/substack/minimist) from 1.2.5 to 1.2.6.
-    > - [Release notes](https://github.com/substack/minimist/releases)
-    > - [Commits](https://github.com/substack/minimist/compare/1.2.5...1.2.6)
+    > https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#specifications
     >
-    > ---
-    > updated-dependencies:
-    > - dependency-name: minimist
-    >   dependency-type: indirect
-    > ...
-    >
-    > Signed-off-by: dependabot[bot] <support@github.com>
-
-_Released by Morgan Roderick on 2022-10-29._
 
 ## 4.0.5
 
