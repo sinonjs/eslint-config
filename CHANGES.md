@@ -1,5 +1,12 @@
 # Changes
 
+## 5.0.0
+
+- [`eab78ee`](https://github.com/sinonjs/eslint-config-sinon/commit/eab78ee83acc9fe7189e0aab2e8a8a5ca513dd8e)
+  Upgrade packages to support Node >= 20 (Carl-Erik Kopseng)
+
+_Released by [Carl-Erik Kopseng](https://github.com/fatso83) on 2023-11-28._
+
 ## 4.1.0
 
 - [`3aa7026`](https://github.com/sinonjs/eslint-config-sinon/commit/3aa70263691bc64389ac8c44f487453dd32bdbd3)
