@@ -314,7 +314,7 @@ module.exports = {
     variables,
     stylisticIssues,
     ecmaScript6,
-    jsDoc
+    jsDoc,
   ),
   settings: {
     jsdoc: {
