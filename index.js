@@ -328,7 +328,10 @@ module.exports = {
       env: {
         mocha: true,
       },
-      extends: ["plugin:mocha/recommended"],
+      extends: [
+        "plugin:mocha/recommended",
+        "plugin:jsdoc/recommended-typescript-flavor",
+      ],
       rules: {
         "max-nested-callbacks": ["warn", 5],
         "jsdoc/require-jsdoc": "off",
