@@ -1,5 +1,12 @@
 # Changes
 
+## 5.0.1
+
+- [`c2ad115`](https://github.com/sinonjs/eslint-config-sinon/commit/c2ad115386b2db3b87b6485814c6d10d85ac7336)
+  Use Typescript flavored JSDoc (Carl-Erik Kopseng)
+
+_Released by [Carl-Erik Kopseng](https://github.com/fatso83) on 2023-11-28._
+
 ## 5.0.0
 
 - [`eab78ee`](https://github.com/sinonjs/eslint-config-sinon/commit/eab78ee83acc9fe7189e0aab2e8a8a5ca513dd8e)
