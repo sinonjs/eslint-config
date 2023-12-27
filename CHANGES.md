@@ -1,5 +1,12 @@
 # Changes
 
+## 5.0.2
+
+- [`9753796`](https://github.com/sinonjs/eslint-config-sinon/commit/975379629bac943f70da2e964a690fd02ba947b2)
+  chore: update browserslist (Morgan Roderick)
+
+_Released by Morgan Roderick on 2023-12-27._
+
 ## 5.0.1
 
 - [`c2ad115`](https://github.com/sinonjs/eslint-config-sinon/commit/c2ad115386b2db3b87b6485814c6d10d85ac7336)
