@@ -1,5 +1,18 @@
 # Changes
 
+## 5.0.3
+
+- [`0ae5053`](https://github.com/sinonjs/eslint-config-sinon/commit/0ae505312a2190b47563542d85155da71eb8ae7e)
+  Upgrade packages: eslint-plugin-compat blocking Eslint 9 (Carl-Erik Kopseng)
+    >
+    > Eslint-plugin-compat has not been maintained for 7 months.
+    > Version 9 of Eslint has long been out and a PR exists for fixing the
+    > compatibility. We might need to either fork or find something else.
+    > https://github.com/amilajack/eslint-plugin-compat/pull/609
+    >
+
+_Released by [Carl-Erik Kopseng](https://github.com/fatso83) on 2024-04-25._
+
 ## 5.0.2
 
 - [`9753796`](https://github.com/sinonjs/eslint-config-sinon/commit/975379629bac943f70da2e964a690fd02ba947b2)
