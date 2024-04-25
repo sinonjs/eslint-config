@@ -23,16 +23,16 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "eslint": "^8.54.0",
+    "eslint": "^8",
     "eslint-plugin-compat": "^4.2.0",
-    "eslint-plugin-jsdoc": "^46.9.0",
-    "eslint-plugin-mocha": "^10.2.0"
+    "eslint-plugin-jsdoc": "^48.2.3",
+    "eslint-plugin-mocha": "^10.4.3"
   },
   "devDependencies": {
-    "@studio/changes": "^2.2.0",
+    "@studio/changes": "^3.0.0",
     "husky": "^7",
-    "lint-staged": "^15.1.0",
-    "prettier": "^3.1.0"
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
   },
   "lint-staged": {
     "*.{js,md}": "prettier --check",
