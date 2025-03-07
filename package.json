@@ -12,35 +12,38 @@
     "prettier:write": "prettier --write '**/*.{js, md}'",
     "version": "changes --commits --footer",
     "postversion": "git push --follow-tags && npm publish --access public",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "prepare": "husky"
   },
   "license": "BSD-3-Clause",
   "files": [
-    "index",
+    "index.js",
+    "eslint.config.js",
     "LICENSE",
     "README.md",
     ".browserslistrc"
   ],
   "main": "index.js",
   "dependencies": {
-    "eslint": "^8",
-    "eslint-plugin-compat": "^4.2.0",
-    "eslint-plugin-jsdoc": "^48.2.3",
-    "eslint-plugin-mocha": "^10.4.3"
+    "eslint": "^9.21.0",
+    "eslint-plugin-compat": "^6.0.2",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-mocha": "^10.5.0"
   },
   "devDependencies": {
     "@studio/changes": "^3.0.0",
-    "husky": "^7",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5"
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.3"
   },
   "lint-staged": {
-    "*.{js,md}": "prettier --check",
-    "*.js": "eslint --quiet"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "eslint --quiet"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
   }
 }
