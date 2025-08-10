@@ -1,5 +1,12 @@
 # Changes
 
+## 5.0.4
+
+- [`95eae45`](https://github.com/sinonjs/eslint-config-sinon/commit/95eae4506d4e9f42b00a14a258f676ceb050904e)
+  Update to ES2024 to avoid borking on #privateField (Carl-Erik Kopseng)
+
+_Released by [Carl-Erik Kopseng](https://github.com/fatso83) on 2025-08-10._
+
 ## 5.0.3
 
 - [`0ae5053`](https://github.com/sinonjs/eslint-config-sinon/commit/0ae505312a2190b47563542d85155da71eb8ae7e)
