@@ -20,14 +20,12 @@ pre-commit tooling is on `lint-staged` 16.x.
 
 ## Usage
 
-Add this to the `package.json`:
+Add an `eslint.config.js` file to the project root:
 
-```json
-{
-  "eslintConfig": {
-    "extends": "@sinonjs/eslint-config"
-  }
-}
+```js
+"use strict";
+
+module.exports = require("@sinonjs/eslint-config");
 ```
 
 Create a `.browserslistrc` in the root of the project
@@ -44,4 +42,4 @@ maintained node versions
 
 Visit [browserslist.dev](https://browserslist.dev/?q=PiAwLjUlLCBsYXN0IDIgdmVyc2lvbnMsIEZpcmVmb3ggRVNSLCBub3QgZGVhZCwgbm90IElFIDExLCBub3Qgb3BfbWluaSBhbGw%3D) to see what this translates to.
 
-[docs]: http://eslint.org/docs/developer-guide/shareable-configs
+[docs]: https://eslint.org/docs/latest/extend/shareable-configs

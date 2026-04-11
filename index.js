@@ -1,4 +1,11 @@
 "use strict";
+const compat = require("eslint-plugin-compat");
+const globals = require("globals");
+const jsdoc =
+  require("./node_modules/eslint-plugin-jsdoc/src/index-cjs.js").default;
+const mocha =
+  require("eslint-plugin-mocha/plugin.js").default ||
+  require("eslint-plugin-mocha/plugin.js");
 // the rules that are commented out with "// prettier: ", are the ones that are handled by prettier
 // which are noted to never be needed:
 // see https://github.com/prettier/eslint-config-prettier/blob/0ea836f81ac14295fb6801c4aa74446e04dda8ad/index.js#L16-L87
@@ -295,69 +302,95 @@ const jsDoc = {
   "jsdoc/require-returns-description": "off",
 };
 
-module.exports = {
-  extends: ["plugin:compat/recommended", "plugin:jsdoc/recommended"],
-  parserOptions: {
-    ecmaVersion: 2023,
-  },
-  env: {
-    browser: true,
-    node: true,
-    es2023: true,
-  },
-  plugins: ["compat", "jsdoc"],
-  rules: Object.assign(
-    {},
-    possibleErrors,
-    bestPractices,
-    strictMode,
-    variables,
-    stylisticIssues,
-    ecmaScript6,
-    jsDoc,
-  ),
-  settings: {
-    jsdoc: {
-      ignorePrivate: true,
-    },
-  },
-
-  overrides: [
-    {
-      files: ["*.test.*", "*-test.*"],
-      env: {
-        mocha: true,
-      },
-      extends: [
-        "plugin:mocha/recommended",
-        "plugin:jsdoc/recommended-typescript-flavor",
-      ],
-      rules: {
-        "max-nested-callbacks": ["warn", 5],
-        "jsdoc/require-jsdoc": "off",
-        "mocha/handle-done-callback": "error",
-        "mocha/max-top-level-suites": "off",
-        "mocha/no-async-describe": "error",
-        "mocha/no-exclusive-tests": "error",
-        "mocha/no-exports": "error",
-        "mocha/no-global-tests": "error",
-        "mocha/no-hooks": "off",
-        "mocha/no-hooks-for-single-case": "off",
-        "mocha/no-identical-title": "error",
-        "mocha/no-mocha-arrows": "error",
-        "mocha/no-nested-tests": "error",
-        "mocha/no-pending-tests": "error",
-        "mocha/no-return-and-callback": "error",
-        "mocha/no-return-from-async": "error",
-        "mocha/no-setup-in-describe": "error",
-        "mocha/no-sibling-hooks": "error",
-        "mocha/no-skipped-tests": "warn",
-        "mocha/no-synchronous-tests": "off",
-        "mocha/no-top-level-hooks": "error",
-        "mocha/prefer-arrow-callback": "off",
-        "mocha/valid-suite-description": "off",
-        "mocha/valid-test-description": "off",
-      },
-    },
-  ],
+const sharedGlobals = {
+  ...globals.browser,
+  ...globals.node,
+  ...globals.es2023,
 };
+
+const sharedLanguageOptions = {
+  ecmaVersion: 2023,
+  sourceType: "commonjs",
+  globals: sharedGlobals,
+};
+
+const sharedRules = Object.assign(
+  {},
+  possibleErrors,
+  bestPractices,
+  strictMode,
+  variables,
+  stylisticIssues,
+  ecmaScript6,
+  jsDoc,
+);
+
+module.exports = [
+  {
+    plugins: {
+      compat,
+      jsdoc,
+    },
+    languageOptions: sharedLanguageOptions,
+    rules: {
+      ...compat.configs["flat/recommended"].rules,
+      ...jsdoc.configs["flat/recommended"].rules,
+      ...sharedRules,
+    },
+    settings: {
+      jsdoc: {
+        ignorePrivate: true,
+      },
+    },
+  },
+  {
+    files: ["**/*.test.*", "**/*-test.*"],
+    plugins: {
+      compat,
+      jsdoc,
+      mocha,
+    },
+    languageOptions: {
+      ...sharedLanguageOptions,
+      globals: {
+        ...sharedGlobals,
+        ...mocha.configs.recommended.languageOptions.globals,
+      },
+    },
+    rules: {
+      ...compat.configs["flat/recommended"].rules,
+      ...jsdoc.configs["flat/recommended-typescript-flavor"].rules,
+      ...mocha.configs.recommended.rules,
+      ...sharedRules,
+      "max-nested-callbacks": ["warn", 5],
+      "jsdoc/require-jsdoc": "off",
+      "mocha/handle-done-callback": "error",
+      "mocha/max-top-level-suites": "off",
+      "mocha/no-async-describe": "error",
+      "mocha/no-exclusive-tests": "error",
+      "mocha/no-exports": "error",
+      "mocha/no-global-tests": "error",
+      "mocha/no-hooks": "off",
+      "mocha/no-hooks-for-single-case": "off",
+      "mocha/no-identical-title": "error",
+      "mocha/no-mocha-arrows": "error",
+      "mocha/no-nested-tests": "error",
+      "mocha/no-pending-tests": "error",
+      "mocha/no-return-and-callback": "error",
+      "mocha/no-return-from-async": "error",
+      "mocha/no-setup-in-describe": "error",
+      "mocha/no-sibling-hooks": "error",
+      "mocha/no-skipped-tests": "warn",
+      "mocha/no-synchronous-tests": "off",
+      "mocha/no-top-level-hooks": "error",
+      "mocha/prefer-arrow-callback": "off",
+      "mocha/valid-suite-description": "off",
+      "mocha/valid-test-description": "off",
+    },
+    settings: {
+      jsdoc: {
+        ignorePrivate: true,
+      },
+    },
+  },
+];
