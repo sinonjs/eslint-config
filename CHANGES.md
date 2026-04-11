@@ -1,5 +1,14 @@
 # Changes
 
+## 7.0.0
+
+- [`88772ed`](https://github.com/sinonjs/eslint-config-sinon/commit/88772ed3d5d62924378def097b737580546bf267)
+  Drop Node 20 (Carl-Erik Kopseng)
+- [`388861d`](https://github.com/sinonjs/eslint-config-sinon/commit/388861d6928d0b7141672bab373b669392c7563e)
+  Upgrade to ESLint 10 and flat file (Carl-Erik Kopseng)
+
+_Released by [Carl-Erik Kopseng](https://github.com/fatso83) on 2026-04-11._
+
 ## 6.0.1
 
 - [`6846530`](https://github.com/sinonjs/eslint-config-sinon/commit/6846530138303f451999a9a5caaa1ab8a1c6d4b7)

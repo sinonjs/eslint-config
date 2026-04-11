@@ -1,7 +1,7 @@
 {
   "name": "@sinonjs/eslint-config",
   "description": "Common eslint config for Sinon",
-  "version": "6.0.1",
+  "version": "7.0.0",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/sinonjs/eslint-config-sinon.git"
