@@ -1,3 +1,3 @@
 "use strict";
 
-module.exports = require("./index.js");
+module.exports = [{ ignores: ["tmp/"] }, ...require("./index.js")];

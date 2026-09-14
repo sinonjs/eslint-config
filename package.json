@@ -13,7 +13,8 @@
     "prepare": "husky",
     "version": "changes --commits --footer",
     "postversion": "git push --follow-tags && npm publish --access public",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "test:downstream": "./test-downstream.sh"
   },
   "license": "BSD-3-Clause",
   "files": [

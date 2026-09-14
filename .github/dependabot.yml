@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # Dependency updates weekly batched by semver
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "00:00" # UTC
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+  # GitHub Actions updates monthly
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "wednesday"
+      time: "01:00"
+    open-pull-requests-limit: 10
+
+    commit-message:
+      prefix: "chore"
+      include: "scope"
