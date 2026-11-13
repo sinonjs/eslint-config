@@ -1,5 +1,29 @@
 # Changes
 
+## 8.0.0
+
+- [`ea0fc7a`](https://github.com/sinonjs/eslint-config-sinon/commit/ea0fc7aa6446392edd82e79c5876f16c044b6b79)
+  Require ES2025 syntax and baseline 2024 browsers (#26) (Carl-Erik Kopseng)
+    >
+    > Turn on the rules that move code to modern syntax and built-ins, so
+    > consumers can no longer drift back to var, function callbacks and
+    > arguments. Rules for ES2023+ built-ins come from eslint-plugin-unicorn,
+    > which needs eslint 10.4 or newer.
+    >
+    > - Parse ES2025 and add es2025 globals
+    > - Replace the browserslist query with 'baseline 2024'
+    > - Use mocha/prefer-arrow-callback in test files
+    > - Ignore common output directories in all consumers
+    >
+    > BREAKING CHANGE: projects need code changes to pass lint; see README.
+    > Amp-Thread-ID: https://ampcode.com/threads/T-01a1d422-dc16-7228-b6a2-4229a79c2a50
+    >
+    > Co-authored-by: Amp <amp@ampcode.com>
+- [`7255d68`](https://github.com/sinonjs/eslint-config-sinon/commit/7255d68deaab713ed721aa1fec49e17758eebbc4)
+  Group Dependabot minor and patch updates (Carl-Erik Kopseng)
+
+_Released by [Carl-Erik Kopseng](https://github.com/fatso83) on 2026-11-13._
+
 ## 7.0.3
 
 - [`93fcf37`](https://github.com/sinonjs/eslint-config-sinon/commit/93fcf37b24277a1c1af1722a38cc5a5848c01c04)
