@@ -2,6 +2,8 @@
 const compat = require("eslint-plugin-compat");
 const globals = require("globals");
 const jsdoc = require("eslint-plugin-jsdoc");
+const unicorn =
+  require("eslint-plugin-unicorn").default || require("eslint-plugin-unicorn");
 const mocha =
   require("eslint-plugin-mocha/plugin.js").default ||
   require("eslint-plugin-mocha/plugin.js");
@@ -243,7 +245,7 @@ const stylisticIssues = {
   // prettier: "operator-linebreak": "off",
   // prettier: "padded-blocks": "off",
   "padding-line-between-statements": "off",
-  "prefer-object-spread": "off",
+  "prefer-object-spread": "error",
   // prettier: "quote-props": "off",
   // prettier: "quotes": ["error", "double"],
   // prettier: "semi": "error",
@@ -282,14 +284,15 @@ const ecmaScript6 = {
   "no-useless-computed-key": "error",
   "no-useless-constructor": "error",
   "no-useless-rename": "error",
-  "no-var": 0,
-  "object-shorthand": 0,
-  "prefer-arrow-callback": "off",
+  "no-var": "error",
+  "object-shorthand": ["error", "always"],
+  // named function expressions keep their names in stack traces and error output
+  "prefer-arrow-callback": ["error", { allowNamedFunctions: true }],
   "prefer-const": "error",
   "prefer-destructuring": "off",
   "prefer-numeric-literals": "off",
-  "prefer-rest-params": "off",
-  "prefer-spread": "off",
+  "prefer-rest-params": "error",
+  "prefer-spread": "error",
   "prefer-template": "error",
   "require-yield": 0,
   // prettier: "rest-spread-spacing": "off",
@@ -297,6 +300,46 @@ const ecmaScript6 = {
   "symbol-description": "error",
   // prettier: "template-curly-spacing": "off",
   // prettier: "yield-star-spacing": "off"
+};
+
+// Rules that move code to newer ECMAScript syntax and built-ins. ESLint core
+// only covers up to ES2022, so ES2023+ comes from eslint-plugin-unicorn.
+// Only rules that adopt a language feature are listed: no style preferences,
+// and nothing that changes behaviour (like mutating `sort` -> `toSorted`).
+const modernEcmaScript = {
+  // ES2016-ES2022
+  "prefer-exponentiation-operator": "error",
+  "logical-assignment-operators": ["error", "always"],
+  "prefer-object-has-own": "error",
+  "unicorn/no-for-loop": "error",
+  "unicorn/prefer-array-flat": "error",
+  "unicorn/prefer-array-flat-map": "error",
+  "unicorn/prefer-at": "error",
+  "unicorn/prefer-class-fields": "error",
+  "unicorn/prefer-date-now": "error",
+  "unicorn/prefer-global-this": "error",
+  "unicorn/prefer-includes": "error",
+  "unicorn/prefer-modern-math-apis": "error",
+  "unicorn/prefer-negative-index": "error",
+  "unicorn/prefer-number-properties": "error",
+  "unicorn/prefer-object-from-entries": "error",
+  "unicorn/prefer-optional-catch-binding": "error",
+  "unicorn/prefer-string-replace-all": "error",
+  "unicorn/prefer-string-slice": "error",
+  "unicorn/prefer-string-starts-ends-with": "error",
+  "unicorn/prefer-string-trim-start-end": "error",
+  // ES2023
+  "unicorn/prefer-array-last-methods": "error",
+  // ES2024
+  "unicorn/prefer-group-by": "error",
+  "unicorn/prefer-promise-with-resolvers": "error",
+  // ES2025
+  "unicorn/prefer-set-methods": "error",
+  // Not yet: iterator helpers need Safari 18.4 (baseline 2024 starts at 18.2),
+  // and Node 22 lacks Promise.try and RegExp.escape until its EOL (April 2027).
+  // "unicorn/prefer-iterator-helpers": "error",
+  // "unicorn/prefer-promise-try": "error",
+  // "unicorn/prefer-regexp-escape": "error",
 };
 
 const jsDoc = {
@@ -307,31 +350,42 @@ const jsDoc = {
 const sharedGlobals = {
   ...globals.browser,
   ...globals.node,
-  ...globals.es2023,
+  ...globals.es2025,
 };
 
 const sharedLanguageOptions = {
-  ecmaVersion: 2023,
+  ecmaVersion: 2025,
   sourceType: "commonjs",
   globals: sharedGlobals,
 };
 
-const sharedRules = Object.assign(
-  {},
-  possibleErrors,
-  bestPractices,
-  strictMode,
-  variables,
-  stylisticIssues,
-  ecmaScript6,
-  jsDoc,
-);
+const sharedRules = {
+  ...possibleErrors,
+  ...bestPractices,
+  ...strictMode,
+  ...variables,
+  ...stylisticIssues,
+  ...ecmaScript6,
+  ...modernEcmaScript,
+  ...jsDoc,
+};
 
 module.exports = [
+  {
+    ignores: [
+      "coverage/**",
+      "dist/**",
+      "out/**",
+      "site/**",
+      ".worktrees/**",
+      "**/.worktrees/**",
+    ],
+  },
   {
     plugins: {
       compat,
       jsdoc,
+      unicorn,
     },
     languageOptions: sharedLanguageOptions,
     rules: {
@@ -351,6 +405,7 @@ module.exports = [
       compat,
       jsdoc,
       mocha,
+      unicorn,
     },
     languageOptions: {
       ...sharedLanguageOptions,
@@ -365,6 +420,9 @@ module.exports = [
       ...mocha.configs.recommended.rules,
       ...sharedRules,
       "max-nested-callbacks": "off",
+      // mocha callbacks need `this`; mocha/prefer-arrow-callback leaves them alone
+      "prefer-arrow-callback": "off",
+      "mocha/prefer-arrow-callback": ["error", { allowNamedFunctions: true }],
       "jsdoc/require-jsdoc": "off",
       "mocha/consistent-spacing-between-blocks": "off",
       "mocha/handle-done-callback": "error",
@@ -385,7 +443,6 @@ module.exports = [
       "mocha/no-sibling-hooks": "error",
       "mocha/no-synchronous-tests": "off",
       "mocha/no-top-level-hooks": "error",
-      "mocha/prefer-arrow-callback": "off",
       "mocha/valid-suite-title": "off",
       "mocha/valid-test-title": "off",
     },
